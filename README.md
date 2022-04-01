@@ -213,6 +213,19 @@ client.portalTransparencia.ceaf({
 });
 ```
 
+#### Cadastro de Empresas Inidôneas e Suspensas (CEIS)
+O Cadastro Nacional de Empresas Inidôneas e Suspensas (CEIS) apresenta a relação de empresas e pessoas físicas que sofreram sanções que implicaram a restrição de participar de licitações ou de celebrar contratos com a Administração Pública.
+
+``` typescript
+client.portalTransparencia.ceis({
+  cpf: '000.000.000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
 ## Secretaria de Inspeção do Trabalho 
 #### Trabalho Escravo
 
