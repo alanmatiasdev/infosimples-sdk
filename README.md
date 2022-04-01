@@ -1,1 +1,92 @@
-# infosimples-sdk
+# InfoSimples SDK Node.JS 
+> A forma mais fácil e rápida de integrar o InfoSimples na sua aplicação Node.JS.
+
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE) [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org) [![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://https://npmjs.com/) 
+
+**Sumário**
+- [Instalando](#instalando)
+- [Iniciando](#iniciando)
+- [InfoSimples Exemplos](#infosimples-examplos):
+  - [Receita Federal](##receita-federal)
+    - [Busca de empresas por CNPJ](####busca-de-empresas-por-cnpj)
+    - [PGFN (CND Federal)](####pgfn)
+  - [Busca em Tribunais](##busca-em-tribunais)
+    - [Certidão negativa Cível e Criminal no TRF4](#####certidao-negativa-civel-e-criminal-no-trf4)
+- [Licença](#licenca)
+- [Contribuidores](#contribuidores)
+
+# Instalando
+
+Com Yarn:
+
+```bash
+yarn add install infosimples-sdk
+```
+
+# Iniciando
+
+[Pré-requisito - Criar um token API na InfoSimples](https://api.infosimples.com/administracao/tokens)
+
+Usando a sintaxe **import**:
+```typescript
+import InfoSimples, { InfoSimplesClient } from 'infosimples-sdk';
+
+const client: InfoSimplesClient = InfoSimples.connect({
+  token: 'your-token',
+});
+```
+
+# InfoSimples Exemplos
+
+## Receita Federal
+#### Busca de empresas por CNPJ
+``` typescript
+client.receitaFederal.cnpj({
+  cnpj: '00.000.000/0000-00'
+  origem: 'web',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+O campo origem é opcional.
+
+#### PGFN (CND Federal)
+Emite a Certidão de Débitos Relativos a Créditos Tributários Federais e à Dívida Ativa da União a partir do número de CNPJ ou CPF.
+
+``` typescript
+client.receitaFederal.pgfn({
+  cpf: '000.000.000-00',
+  preferencia_emissao: '2via'
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+Alternativamente você pode usar o CNPJ para a busca. O campo preferencia_emissao é opcional.
+
+## Busca em Tribunais
+#### Certidão negativa Cível e Criminal no TRF4
+``` typescript
+client.tribunais.trf4Certidao({
+  nome: 'Ayla Camila Elisa da Costa',
+  tipo: '01_CIVEL',
+  cpf: '102.909.451-94'
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+Alternativamente você pode usar o CNPJ para a busca. O nome e o tipo são campos obrigatórios.
+
+# Licença
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE)
+
+# Contribuidores
+- [Alan Matias](https://github.com/bralandealmeida)
