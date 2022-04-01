@@ -13,6 +13,7 @@
   - [Busca em Tribunais](#busca-em-tribunais)
     - [Certidão negativa Cível e Criminal no TRF4](#certidão-negativa-cível-e-criminal-no-trf4)
     - [Certidão negativa Cível e Criminal no TRF1](#certidão-negativa-cível-e-criminal-no-trf1)
+    - [Certidão Eletrônica de Ações Trabalhistas (CEAT) TRT15](#certidão-eletrônica-de-ações-trabalhistas-ceat-trt15)
   - [Caixa](#caixa)
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
   - [Portal da Transparência](#portal-da-transparência)
@@ -101,6 +102,21 @@ client.tribunais.trf1Certidao({
   tipo: 'CIVEL',
   cpf: '102.909.451-94',
   orgao: '1_GRAU',
+  considera_filiais: 0
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+Alternativamente você pode usar o CNPJ para a busca. O nome e o tipo são campos obrigatórios.
+
+#### Certidão Eletrônica de Ações Trabalhistas (CEAT) TRT15
+Emite Certidão Eletrônica de Ações Trabalhistas (CEAT) no TRT15 (Tribunal Regional do Trabalho da 15ª Região).
+
+``` typescript
+client.tribunais.trt15Certidao({
+  cpf: '102.909.451-94',
   considera_filiais: 0
 }).then((response) => {
   console.log(response)
