@@ -2,7 +2,7 @@
   "name": "infosimples-sdk",
   "version": "0.1.0",
   "description": "Node.js wrapper module written in Typescript for the InfoSimples data provider API.",
-  "main": "./index.ts",
+  "main": "dist/index.js",
   "repository": "git@github.com:bralandealmeida/infosimples-sdk.git",
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
