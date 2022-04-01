@@ -27,10 +27,6 @@
 - [Licença](#licença)
 - [Contribuidores](#contribuidores)
 
-## Portal da Transparência
-#### Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)
-
-
 # Instalando
 
 Com Yarn:
@@ -183,6 +179,20 @@ O Cadastro de Entidades Privadas Sem Fins Lucrativos Impedidas (CEPIM) apresenta
 ``` typescript
 client.portalTransparencia.cepim({
   cnpj: '00.000.000/0000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+#### Servidor Público
+
+Consulta detalhamento de um servidor público no Portal da Transparência, incluindo dados do vínculo, ficha de remuneração e viagens a serviço.
+
+``` typescript
+client.portalTransparencia.servidorPublico({
+  cpf: '000.000.000-00',
 }).then((response) => {
   console.log(response)
 }).catch((error) => {
