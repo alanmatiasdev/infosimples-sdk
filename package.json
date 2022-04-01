@@ -2,13 +2,13 @@
   "name": "infosimples-sdk",
   "version": "0.1.0",
   "description": "Node.js wrapper module written in Typescript for the InfoSimples data provider API.",
-  "main": "dist/index.js",
+  "main": "./index.ts",
   "repository": "git@github.com:bralandealmeida/infosimples-sdk.git",
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": ""
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.17.0",
