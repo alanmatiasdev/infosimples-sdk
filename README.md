@@ -12,8 +12,16 @@
     - [PGFN (CND Federal)](#pgfn-cnd-federal)
   - [Busca em Tribunais](#busca-em-tribunais)
     - [Certidão negativa Cível e Criminal no TRF4](#certidão-negativa-cível-e-criminal-no-trf4)
+  - [Caixa](#caixa)
+    - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
+  - [Portal da Transparência](#portal-da-transparência)
+    - [Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)](#cadastro-de-entidades-privadas-sem-fins-lucrativos-impedidas-cepim)
 - [Licença](#licença)
 - [Contribuidores](#contribuidores)
+
+## Portal da Transparência
+#### Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)
+
 
 # Instalando
 
@@ -42,7 +50,7 @@ const client: InfoSimplesClient = InfoSimples.connect({
 #### Busca de empresas por CNPJ
 ``` typescript
 client.receitaFederal.cnpj({
-  cnpj: '00.000.000/0000-00'
+  cnpj: '00.000.000/0000-00',
   origem: 'web',
 }).then((response) => {
   console.log(response)
@@ -82,8 +90,36 @@ client.tribunais.trf4Certidao({
   console.log(error)
 });
 ```
-
 Alternativamente você pode usar o CNPJ para a busca. O nome e o tipo são campos obrigatórios.
+
+## Caixa
+#### Regularidade do Empregador (FGTS)
+Consulta a situação de regularidade do empregador e obtém os dados correspondentes ao Certificado de Regularidade do FGTS (CRF), Fundo de Garantia do Tempo de Serviço.
+
+``` typescript
+client.caixa.regularidadeEmpregador({
+  cnpj: '00.000.000/0000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+## Portal da Transparência
+#### Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)
+
+O Cadastro de Entidades Privadas Sem Fins Lucrativos Impedidas (CEPIM) apresenta a relação de entidades privadas sem fins lucrativos que estão impedidas de celebrar novos convênios, contratos de repasse ou termos de parceria com a Administração Pública Federal, em função de irregularidades não resolvidas em convênios, contratos de repasse ou termos de parceria firmados anteriormente.
+
+``` typescript
+client.portalTransparencia.cepim({
+  cnpj: '00.000.000/0000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
 
 # Licença
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE)
