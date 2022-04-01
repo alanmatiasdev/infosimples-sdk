@@ -11,5 +11,30 @@ export type ICertidaoTRF4ByCNPJ = ICertidaoTRF4 & {
   cnpj: string;
 }
 
+type ICertidaoTRF1 = {
+  tipo: 'CIVEL' | 'CRIMINAL' | 'ELEITORAL',
+  orgao: 'AC' | 'AM' | 'AP' | 'BA' | 'DF' | 'GO' | 'MA' | 'MG' | 'MT' | 'PA' | 'PI' | 'RO' | 'RR' | 'TO' | 'TRF1' | '1_GRAU' | '1_2_GRAU';
+  considera_filiais: 0 | 1;
+}
 
+type ICertidaoTRF1ByCPF = ICertidaoTRF1 & { cpf: string };
 
+type ICertidaoTRF1ByCNPJ = ICertidaoTRF1 & { cnpj: string };
+
+export type ICertidaoTRF1Payload = ICertidaoTRF1ByCPF | ICertidaoTRF1ByCNPJ;
+
+export type ITSECertidaoPayload = {
+  name: string;
+  birthdate: string;
+  cpf?: string;
+  titulo_eleitoral?: string;
+  mother?: string;
+  father?: string;
+}
+
+export type ITSEDoadoreFornecedoresPayload = {
+  nome?: string;
+  cpf?: string;
+  cnpj?: string;
+  ano:  '2002' | '2004' | '2006' | '2008' | '2010' | '2012' | '2014' | '2016' | '2018' | '2020';
+}
