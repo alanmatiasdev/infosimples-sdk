@@ -10,9 +10,12 @@ const trt15Certidao = async (opts: IConnectOpts, { cnpj, cpf }: { cnpj?: string,
 
 const tseCertidao = async (opts: IConnectOpts, data: ITSECertidaoPayload) => await api.post('/tse/certidao', { ...opts, ...data })
 
+const tstCndt = async (opts: IConnectOpts, { cpf, cnpj }: { cnpj?: string, cpf: string }) => await api.post('/tst/cndt', { ...opts, cpf, cnpj });
+
 export default {
   trf4Certidao: trf4Certidao as unknown as OmitFirstArg<typeof trf4Certidao>,
   trf1Certidao: trf1Certidao as unknown as OmitFirstArg<typeof trf1Certidao>,
   trt15Certidao: trt15Certidao as unknown as OmitFirstArg<typeof trt15Certidao>,
   tseCertidao: tseCertidao as unknown as OmitFirstArg<typeof tseCertidao>,
+  tstCndt: tstCndt as unknown as OmitFirstArg<typeof tstCndt>,
 };

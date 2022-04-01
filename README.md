@@ -15,6 +15,7 @@
     - [Certidão negativa Cível e Criminal no TRF1](#certidão-negativa-cível-e-criminal-no-trf1)
     - [Certidão Eletrônica de Ações Trabalhistas (CEAT) TRT15](#certidão-eletrônica-de-ações-trabalhistas-ceat-trt15)
     - [Certidão de Quitação Eleitoral TSE](#certidão-de-quitação-eleitoral-tse)
+    - [CNDT TST](#cndt-tst)
   - [Caixa](#caixa)
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
   - [Portal da Transparência](#portal-da-transparência)
@@ -127,7 +128,7 @@ client.tribunais.trt15Certidao({
   console.log(error)
 });
 ```
-Alternativamente você pode usar o CNPJ para a busca. O nome e o tipo são campos obrigatórios.
+Alternativamente você pode usar o CNPJ para a busca.
 
 #### Certidão de Quitação Eleitoral TSE
 Emite certidão de quitação eleitoral de cidadão brasileiro junto à Justiça Eleitoral no portal do Tribunal Superior Eleitoral (TSE) do Brasil.
@@ -142,6 +143,21 @@ client.tribunais.tseCertidao({
   console.log(error)
 });
 ```
+
+#### CNDT TST
+Retorna detalhes sobre a Certidão Negativa de Débitos Trabalhistas (CNDT) emitida pela Justiça do Trabalho (TST).
+
+``` typescript
+client.tribunais.tstCndt({
+  cpf: '000.000.000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+Alternativamente você pode usar o CNPJ para a busca.
+
 
 ## Caixa
 #### Regularidade do Empregador (FGTS)
