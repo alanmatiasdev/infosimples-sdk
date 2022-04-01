@@ -5,7 +5,10 @@ const cepim = async (opts: IConnectOpts, { cnpj }: { cnpj: string }) => await ap
 
 const servidorPublico = async (opts: IConnectOpts, { cpf }:  { cpf: string })=> await api.post('/portal-transparencia/servidor', { ...opts, cpf });
 
+const ceat = async (opts: IConnectOpts, { cpf }:  { cpf: string }) => await api.post('/portal-transparencia/ceaf', { ...opts, cpf });
+
 export default {
   cepim: cepim as unknown as OmitFirstArg<typeof cepim>,
   servidorPublico: servidorPublico as unknown as OmitFirstArg<typeof servidorPublico>,
+  ceat: ceat as unknown as OmitFirstArg<typeof ceat>,
 };

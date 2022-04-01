@@ -20,6 +20,8 @@
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
   - [Portal da Transparência](#portal-da-transparência)
     - [Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)](#cadastro-de-entidades-privadas-sem-fins-lucrativos-impedidas-cepim)
+    - [Servidor Público](#servidor-público)
+    - [Cadastro de Expulsões da Administração Federal (CEAF)](#cadastro-de-expulsões-da-administração-federal-ceaf)
   - [Secretaria de Inspeção do Trabalho](#secretaria-de-inspeção-do-trabalho)
     - [Trabalho Escravo](#trabalho-escravo)
   - [OFAC](#ofac)
@@ -173,7 +175,6 @@ client.caixa.regularidadeEmpregador({
 
 ## Portal da Transparência
 #### Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)
-
 O Cadastro de Entidades Privadas Sem Fins Lucrativos Impedidas (CEPIM) apresenta a relação de entidades privadas sem fins lucrativos que estão impedidas de celebrar novos convênios, contratos de repasse ou termos de parceria com a Administração Pública Federal, em função de irregularidades não resolvidas em convênios, contratos de repasse ou termos de parceria firmados anteriormente.
 
 ``` typescript
@@ -187,11 +188,23 @@ client.portalTransparencia.cepim({
 ```
 
 #### Servidor Público
-
 Consulta detalhamento de um servidor público no Portal da Transparência, incluindo dados do vínculo, ficha de remuneração e viagens a serviço.
 
 ``` typescript
 client.portalTransparencia.servidorPublico({
+  cpf: '000.000.000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+#### Cadastro de Expulsões da Administração Federal (CEAF)
+Consulta sanções no Portal da Transparência do tipo Cadastro de Expulsões da Administração Federal (CEAF), que reúne as penalidades expulsivas (demissão, cassação de aposentadoria e destituição de cargo em comissão ou função comissionada) aplicadas no âmbito do Poder Executivo Federal e da Câmara dos Deputados, a servidores civis, efetivos ou não.
+
+``` typescript
+client.portalTransparencia.ceaf({
   cpf: '000.000.000-00',
 }).then((response) => {
   console.log(response)
