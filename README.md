@@ -9,10 +9,10 @@
 - [InfoSimples Exemplos](#infosimples-exemplos):
   - [Receita Federal](#receita-federal)
     - [Busca de empresas por CNPJ](#busca-de-empresas-por-cnpj)
-    - [PGFN (CND Federal)](#pgfn)
+    - [PGFN (CND Federal)](#pgfn-cnd-federal)
   - [Busca em Tribunais](#busca-em-tribunais)
-    - [Certidão negativa Cível e Criminal no TRF4](#certidao-negativa-civel-e-criminal-no-trf4)
-- [Licença](#licenca)
+    - [Certidão negativa Cível e Criminal no TRF4](#certidão-negativa-cível-e-criminal-no-trf4)
+- [Licença](#licença)
 - [Contribuidores](#contribuidores)
 
 # Instalando
