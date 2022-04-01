@@ -18,6 +18,8 @@
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
   - [Portal da Transparência](#portal-da-transparência)
     - [Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)](#cadastro-de-entidades-privadas-sem-fins-lucrativos-impedidas-cepim)
+  - [Secretaria de Inspeção do Trabalho ](#secretaria-de-inspeção-do-trabalho)
+    - [Trabalho Escravo](#trabalho-escravo)
 - [Licença](#licença)
 - [Contribuidores](#contribuidores)
 
@@ -147,6 +149,21 @@ O Cadastro de Entidades Privadas Sem Fins Lucrativos Impedidas (CEPIM) apresenta
 
 ``` typescript
 client.portalTransparencia.cepim({
+  cnpj: '00.000.000/0000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+## Secretaria de Inspeção do Trabalho 
+#### Trabalho Escravo
+
+Consulta se um CPF ou CNPJ está presente no cadastro de empregadores que tenham submetido trabalhadores a condições análogas à de escravo, organizada pela SIT (Secretaria de Inspeção do Trabalho). Esta é uma consulta offline baseada em uma lista publicada pela SIT de tempos em tempos.
+
+``` typescript
+client.sit.trabalhoEscravo({
   cnpj: '00.000.000/0000-00',
 }).then((response) => {
   console.log(response)
