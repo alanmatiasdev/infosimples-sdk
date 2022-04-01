@@ -15,6 +15,7 @@
     - [Certidão negativa Cível e Criminal no TRF1](#certidão-negativa-cível-e-criminal-no-trf1)
     - [Certidão Eletrônica de Ações Trabalhistas (CEAT) TRT15](#certidão-eletrônica-de-ações-trabalhistas-ceat-trt15)
     - [Certidão de Quitação Eleitoral TSE](#certidão-de-quitação-eleitoral-tse)
+    - [Doadores e Fornecedores TSE](#doadores-e-fornecedores-tse)
     - [CNDT TST](#cndt-tst)
   - [Caixa](#caixa)
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
@@ -137,6 +138,20 @@ Emite certidão de quitação eleitoral de cidadão brasileiro junto à Justiça
 client.tribunais.tseCertidao({
   name: 'Ayla Camila Elisa da Costa',
   birthdate: '09/03/1972',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+#### Doadores e Fornecedores TSE
+Consulta Doadores e Fornecedores de Eleições Gerais ou Municipais desde 2002 no portal de Divulgação de Candidaturas e Contas Eleitorais do Tribunal Superior Eleitoral (TSE) do Brasil. Retorna até 10 doadores/fornecedores por pesquisa.
+
+``` typescript
+client.tribunais.tseDoadoresFornecedores({
+  nome: '000.000.000-00',
+  ano: '2020'
 }).then((response) => {
   console.log(response)
 }).catch((error) => {

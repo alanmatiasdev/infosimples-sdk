@@ -31,3 +31,10 @@ export type ITSECertidaoPayload = {
   mother?: string;
   father?: string;
 }
+
+export type ITSEDoadoreFornecedoresPayload = {
+  nome?: string;
+  cpf?: string;
+  cnpj?: string;
+  ano:  '2002' | '2004' | '2006' | '2008' | '2010' | '2012' | '2014' | '2016' | '2018' | '2020';
+}
