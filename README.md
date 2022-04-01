@@ -20,8 +20,10 @@
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
   - [Portal da Transparência](#portal-da-transparência)
     - [Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)](#cadastro-de-entidades-privadas-sem-fins-lucrativos-impedidas-cepim)
-  - [Secretaria de Inspeção do Trabalho ](#secretaria-de-inspeção-do-trabalho)
+  - [Secretaria de Inspeção do Trabalho](#secretaria-de-inspeção-do-trabalho)
     - [Trabalho Escravo](#trabalho-escravo)
+  - [OFAC](#ofac)
+    - [Sanções](#sanções)
 - [Licença](#licença)
 - [Contribuidores](#contribuidores)
 
@@ -196,6 +198,21 @@ Consulta se um CPF ou CNPJ está presente no cadastro de empregadores que tenham
 ``` typescript
 client.sit.trabalhoEscravo({
   cnpj: '00.000.000/0000-00',
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+
+## OFAC
+#### Sanções
+
+Pesquisa indivíduos e entidades presentes na lista de sanções da OFAC (Office of Foreign Assets Control traduzido para o português como "Agência de Controles de Ativos").
+
+``` typescript
+client.ofac.sancoes({
+  query: 'American',
 }).then((response) => {
   console.log(response)
 }).catch((error) => {
