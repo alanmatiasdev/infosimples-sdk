@@ -23,3 +23,11 @@ type ICertidaoTRF1ByCNPJ = ICertidaoTRF1 & { cnpj: string };
 
 export type ICertidaoTRF1Payload = ICertidaoTRF1ByCPF | ICertidaoTRF1ByCNPJ;
 
+export type ITSECertidaoPayload = {
+  name: string;
+  birthdate: string;
+  cpf?: string;
+  titulo_eleitoral?: string;
+  mother?: string;
+  father?: string;
+}
