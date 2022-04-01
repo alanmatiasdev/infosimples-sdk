@@ -12,6 +12,7 @@
     - [PGFN (CND Federal)](#pgfn-cnd-federal)
   - [Busca em Tribunais](#busca-em-tribunais)
     - [Certidão negativa Cível e Criminal no TRF4](#certidão-negativa-cível-e-criminal-no-trf4)
+    - [Certidão negativa Cível e Criminal no TRF1](#certidão-negativa-cível-e-criminal-no-trf1)
   - [Caixa](#caixa)
     - [Regularidade do Empregador (FGTS)](#regularidade-do-empregador-fgts)
   - [Portal da Transparência](#portal-da-transparência)
@@ -84,6 +85,23 @@ client.tribunais.trf4Certidao({
   nome: 'Ayla Camila Elisa da Costa',
   tipo: '01_CIVEL',
   cpf: '102.909.451-94'
+}).then((response) => {
+  console.log(response)
+}).catch((error) => {
+  console.log(error)
+});
+```
+Alternativamente você pode usar o CNPJ para a busca. O nome e o tipo são campos obrigatórios.
+
+#### Certidão negativa Cível e Criminal no TRF1
+Emite certidão negativa cível e criminal no portal do Tribunal Regional Federal da 1ª Região (AC, AM, AP, BA, DF, GO, MA, MG, MT , PA, PI, RO, RR e TO), TRF1.
+
+``` typescript
+client.tribunais.trf1Certidao({
+  tipo: 'CIVEL',
+  cpf: '102.909.451-94',
+  orgao: '1_GRAU',
+  considera_filiais: 0
 }).then((response) => {
   console.log(response)
 }).catch((error) => {
