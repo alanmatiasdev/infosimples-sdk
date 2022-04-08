@@ -1,4 +1,5 @@
 # 0.3.0 (April xx, 2022)
- - Fix: ofac sancoes request path;
- - Fix: TRF4 request path; 
- - Fix: TRF1 reques path;
+ - Fix: ofac sancoes endpoint;
+ - Fix: TRF4 endpoint; 
+ - Fix: TRF1 endpoint;
+ - Fix: TRF15 endpoint;

@@ -6,7 +6,7 @@ const trf4Certidao = async (opts: IConnectOpts, data: ICertidaoTRF4ByCNPJ | ICer
 
 const trf1Certidao = async (opts: IConnectOpts, data: ICertidaoTRF1Payload) => await api.post('/tribunal/trf1/certidao', { ...opts, ...data });
 
-const trt15Certidao = async (opts: IConnectOpts, { cnpj, cpf }: { cnpj?: string, cpf?: string })=> await api.post('/', { ...opts, cnpj, cpf })
+const trt15Certidao = async (opts: IConnectOpts, { cnpj, cpf }: { cnpj?: string, cpf?: string })=> await api.post('/tribunal/trt15/ceat', { ...opts, cnpj, cpf })
 
 const tseCertidao = async (opts: IConnectOpts, data: ITSECertidaoPayload) => await api.post('/tse/certidao', { ...opts, ...data })
 
