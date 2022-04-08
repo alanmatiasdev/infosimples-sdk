@@ -2,7 +2,7 @@ import api from '../client/api';
 import { IConnectOpts } from '../'
 import { ICertidaoTRF4ByCNPJ, ICertidaoTRF4ByCPF, ICertidaoTRF1Payload, ITSECertidaoPayload, ITSEDoadoreFornecedoresPayload  } from './tribunaisTypes';
 
-const trf4Certidao = async (opts: IConnectOpts, data: ICertidaoTRF4ByCNPJ | ICertidaoTRF4ByCPF) => await api.post('/trf4/certidao', { ...opts, ...data });
+const trf4Certidao = async (opts: IConnectOpts, data: ICertidaoTRF4ByCNPJ | ICertidaoTRF4ByCPF) => await api.post('/tribunal/trf4/certidao', { ...opts, ...data });
 
 const trf1Certidao = async (opts: IConnectOpts, data: ICertidaoTRF1Payload) => await api.post('/', { ...opts, ...data });
 
