@@ -3,6 +3,12 @@
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE) [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org) [![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://www.npmjs.com/package/infosimples-sdk) 
 
+> Este pacote está em desenvolvimento. Aceitamos pull requests para implementar os demais métodos da API.
+
+### Todo
+- [ ] implementar demais métodos da API InfoSimples
+- [ ] implementar testes automatizados
+
 **Sumário**
 - [Instalando](#instalando)
 - [Iniciando](#iniciando)
@@ -28,7 +34,7 @@
   - [OFAC](#ofac)
     - [Sanções](#sanções)
 - [Licença](#licença)
-- [Contribuidores](#contribuidores)
+- [Colaboradores](#colaboradores)
 
 # Instalando
 
@@ -274,5 +280,5 @@ client.ofac.sancoes({
 # Licença
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE)
 
-# Contribuidores
+# Colaboradores
 - [Alan Matias](https://github.com/bralandealmeida)
