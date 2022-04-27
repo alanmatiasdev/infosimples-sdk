@@ -1,6 +1,6 @@
 {
   "name": "infosimples-sdk",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A forma mais fácil e rápida de integrar o InfoSimples na sua aplicação Node.JS",
   "keywords": [
     "infosimples",
@@ -14,8 +14,8 @@
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
   "files": [
-		"dist"
-	],
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "prepublish": "yarn build"
