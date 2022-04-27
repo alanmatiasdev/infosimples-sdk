@@ -1,6 +1,6 @@
 {
   "name": "infosimples-sdk",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "A forma mais fácil e rápida de integrar o InfoSimples na sua aplicação Node.JS",
   "keywords": [
     "infosimples",
@@ -18,6 +18,8 @@
     "prepublish": "yarn build"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "eslint": "^8.12.0",
@@ -26,6 +28,7 @@
     "eslint-import-resolver-typescript": "^2.7.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
     "prettier": "^2.6.1",
     "typescript": "^4.6.3"
   },

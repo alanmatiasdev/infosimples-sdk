@@ -1,8 +1,9 @@
 # InfoSimples SDK Node.JS 
 > A forma mais fácil e rápida de integrar a API v2 InfoSimples na sua aplicação Node.JS.
 
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE) [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org) [![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://www.npmjs.com/package/infosimples-sdk) 
+[![NPM Version](http://img.shields.io/npm/v/infosimples-sdk.svg?style=flat)](https://www.npmjs.com/package/infosimples-sdk) [![NPM Downloads](https://img.shields.io/npm/dm/infosimples-sdk.svg?style=flat)](https://npmcharts.com/compare/infosimples-sdk?minimal=true) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/bralandealmeida/infosimples-sdk/blob/master/LICENSE) [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org) [![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://www.npmjs.com/package/infosimples-sdk) 
 
+----
 > Este pacote está em desenvolvimento. Aceitamos pull requests para implementar os demais métodos da API.
 
 ### Todo
