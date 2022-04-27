@@ -13,6 +13,9 @@
   "repository": "git@github.com:bralandealmeida/infosimples-sdk.git",
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
+  "files": [
+		"dist"
+	],
   "scripts": {
     "build": "tsc",
     "prepublish": "yarn build"
