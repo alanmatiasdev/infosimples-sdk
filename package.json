@@ -17,9 +17,6 @@
     "node": ">=18"
   },
   "packageManager": "pnpm@10.19.0",
-  "publishConfig": {
-    "provenance": true
-  },
   "files": [
     "dist"
   ],

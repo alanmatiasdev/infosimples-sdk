@@ -34,11 +34,15 @@ version bump or `npm publish` step:
    based on `fix`/`feat`/`BREAKING CHANGE` commits since the last release (`chore`/`docs`/`test`/`ci`
    etc. don't trigger a version bump).
 2. Merging that release PR makes the action create a GitHub Release + git tag, which the same workflow
-   run detects via the `release_created` output — it then builds and `pnpm publish`es to npm in the
+   run detects via the `release_created` output — it then builds and `npm publish`es to npm in the
    same job, gated on that output.
 
-Requires an `NPM_TOKEN` repo secret (an npm access token with publish rights) for the publish step;
-everything else uses the default `GITHUB_TOKEN`.
+Publishing uses npm's trusted publishing (OIDC, via the `id-token: write` permission) — no `NPM_TOKEN`
+secret. That's why the publish step is `npm publish`, not `pnpm publish`: npm's OIDC support is GA,
+pnpm's is still flaky (see the comment in the workflow). Trusted publishing has to be configured on the
+npm package's side (Settings → Trusted Publisher, pointing at this repo/workflow) for this to work; if
+that's ever removed, the publish step needs a token-based fallback again. Everything else in the
+workflow uses the default `GITHUB_TOKEN`.
 
 ## Architecture
 
