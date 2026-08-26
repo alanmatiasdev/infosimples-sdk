@@ -16,5 +16,5 @@ const post = async (endpoint: string, data?: any, config?: any) => {
 
 export default {
   get,
-  post
+  post,
 };
