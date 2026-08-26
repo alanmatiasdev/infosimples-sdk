@@ -11,7 +11,7 @@
   ],
   "main": "dist/index.js",
   "repository": "git@github.com:alanmatiasdev/infosimples-sdk.git",
-  "author": "Alan Matias <alandealmeida@insightlab.com.br>",
+  "author": "Alan Matias <me@alanmatias.dev>",
   "license": "MIT",
   "engines": {
     "node": ">=18"
