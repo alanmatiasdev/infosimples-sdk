@@ -7,7 +7,7 @@ import ofac from './ofac';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
- 
+
 export default {
   tribunais,
   receitaFederal,

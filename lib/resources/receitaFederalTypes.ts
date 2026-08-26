@@ -5,7 +5,7 @@ export type CNPJOpts = {
 
 type PGFN = {
   preferencia_emissao?: 'nova' | '2via';
-}
+};
 
 type PGFNByCPF = PGFN & {
   cpf: string;

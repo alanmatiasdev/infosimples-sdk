@@ -6,14 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A TypeScript SDK that wraps the InfoSimples API v2 (`https://api.infosimples.com/api/v2/consultas`) for Node.js consumers. It has no runtime logic of its own beyond thin `axios`-based wrappers per API resource — the value is the typed surface over InfoSimples' endpoints (Receita Federal, Tribunais, Caixa, Portal da Transparência, SIT, OFAC). Published to npm as `infosimples-sdk`.
 
-There is currently no automated test suite (see README Todo) and no lint/format npm scripts wired up — `eslint`/`prettier` config exists but must be invoked via `npx` directly.
-
 ## Commands
 
 ```bash
-pnpm build              # tsc compile: lib/ + index.ts -> dist/
-npx eslint . --ext .ts  # lint (airbnb-base + typescript-eslint + prettier)
-npx prettier --check .  # check formatting (singleQuote, trailingComma: all, arrowParens: avoid)
+pnpm build         # tsc compile: lib/ + index.ts -> dist/
+pnpm lint          # eslint
+pnpm format:check  # check formatting (singleQuote, trailingComma: all, arrowParens: avoid)
 ```
 
 There is no `test` script — the project has no automated tests yet.
@@ -24,7 +22,7 @@ Commit messages are enforced by commitlint (`@commitlint/config-conventional`) v
 
 **Entry point chain**: `index.ts` re-exports everything from `lib/index.ts`, which re-exports `lib/client/index.ts` as both the default export and named `connect`.
 
-**Client factory pattern** (`lib/client/index.ts`): `connect({ token })` validates the token, then walks the entire `resources` object tree (`lib/resources/index.ts`) and binds every leaf method to the auth opts (`{ token }`) via `Function.prototype.bind`. This produces a client whose call sites *look* like `client.receitaFederal.cnpj(data)` even though every underlying resource function is actually declared as `(opts: IConnectOpts, data) => ...` — the first `opts` argument is bound away by the `looper`/`binder` machinery in `connect()`, not by TypeScript. That's why every resource function signature has `opts: IConnectOpts` as its first parameter but is exported cast as `OmitFirstArg<typeof fn>` (see `@types/typings.d.ts`) — the cast tells consumers the truth about the *bound* function's shape while the implementation still needs the raw unbound signature.
+**Client factory pattern** (`lib/client/index.ts`): `connect({ token })` validates the token, then walks the entire `resources` object tree (`lib/resources/index.ts`) and binds every leaf method to the auth opts (`{ token }`) via `Function.prototype.bind`. This produces a client whose call sites _look_ like `client.receitaFederal.cnpj(data)` even though every underlying resource function is actually declared as `(opts: IConnectOpts, data) => ...` — the first `opts` argument is bound away by the `looper`/`binder` machinery in `connect()`, not by TypeScript. That's why every resource function signature has `opts: IConnectOpts` as its first parameter but is exported cast as `OmitFirstArg<typeof fn>` (see `@types/typings.d.ts`) — the cast tells consumers the truth about the _bound_ function's shape while the implementation still needs the raw unbound signature.
 
 **Resources** (`lib/resources/*.ts`): One file per InfoSimples product area (`receitaFederal`, `tribunais`, `caixa`, `portalTransparencia`, `sit`, `ofac`), each exporting a default object of methods. Every method follows the same shape:
 
