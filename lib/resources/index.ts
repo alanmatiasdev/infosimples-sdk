@@ -7,6 +7,7 @@ import ofac from './ofac';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
+export * from './portalTransparenciaTypes';
 
 export default {
   tribunais,

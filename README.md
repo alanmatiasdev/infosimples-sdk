@@ -34,6 +34,18 @@
     - [Cadastro de Entidades Privadas sem Fins Lucrativos Impedidas (CEPIM)](#cadastro-de-entidades-privadas-sem-fins-lucrativos-impedidas-cepim)
     - [Servidor Público](#servidor-público)
     - [Cadastro de Expulsões da Administração Federal (CEAF)](#cadastro-de-expulsões-da-administração-federal-ceaf)
+    - [Cadastro de Empresas Inidôneas e Suspensas (CEIS)](#cadastro-de-empresas-inidôneas-e-suspensas-ceis)
+    - [Cadastro Nacional de Empresas Punidas (CNEP)](#cadastro-nacional-de-empresas-punidas-cnep)
+    - [Busca](#busca)
+    - [Auxílio Emergencial](#auxílio-emergencial)
+    - [Bolsa Família](#bolsa-família)
+    - [Benefício de Prestação Continuada (BPC)](#benefício-de-prestação-continuada-bpc)
+    - [Convênios e Acordos](#convênios-e-acordos)
+    - [Acordos de Leniência](#acordos-de-leniência)
+    - [Programa de Erradicação do Trabalho Infantil (PETI)](#programa-de-erradicação-do-trabalho-infantil-peti)
+    - [Repasse de Verba](#repasse-de-verba)
+    - [Garantia-Safra](#garantia-safra)
+    - [Seguro Defeso](#seguro-defeso)
   - [Secretaria de Inspeção do Trabalho](#secretaria-de-inspeção-do-trabalho)
     - [Trabalho Escravo](#trabalho-escravo)
   - [OFAC](#ofac)
@@ -277,6 +289,8 @@ client.portalTransparencia
   });
 ```
 
+Alternativamente você pode usar o nome para a busca.
+
 #### Cadastro de Expulsões da Administração Federal (CEAF)
 
 Consulta sanções no Portal da Transparência do tipo Cadastro de Expulsões da Administração Federal (CEAF), que reúne as penalidades expulsivas (demissão, cassação de aposentadoria e destituição de cargo em comissão ou função comissionada) aplicadas no âmbito do Poder Executivo Federal e da Câmara dos Deputados, a servidores civis, efetivos ou não.
@@ -301,6 +315,203 @@ O Cadastro Nacional de Empresas Inidôneas e Suspensas (CEIS) apresenta a relaç
 ```typescript
 client.portalTransparencia
   .ceis({
+    cpf: '000.000.000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+Alternativamente você pode usar o CNPJ para a busca.
+
+#### Cadastro Nacional de Empresas Punidas (CNEP)
+
+Consulta sanções no Portal da Transparência do tipo Cadastro Nacional de Empresas Punidas (CNEP), que contém a relação das empresas que sofreram qualquer das punições previstas na Lei Anticorrupção (Lei nº 12.846/2013).
+
+```typescript
+client.portalTransparencia
+  .cnep({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+Alternativamente você pode usar o CPF para a busca.
+
+#### Busca
+
+Retorna os 100 primeiros resultados a partir do termo de busca enviado para o Portal da Transparência da Controladoria Geral da União (CGU).
+
+```typescript
+client.portalTransparencia
+  .busca({
+    query: 'termo de pesquisa',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Auxílio Emergencial
+
+Retorna as 50 primeiras parcelas do Auxílio Emergencial a partir do CPF ou NIS informado, limitado aos últimos 12 meses.
+
+```typescript
+client.portalTransparencia
+  .auxilioEmergencial({
+    cpf: '000.000.000-00',
+    data_inicio: '2021-01-01',
+    data_fim: '2021-12-31',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Bolsa Família
+
+Retorna as 50 primeiras parcelas de recebidos e sacados do Bolsa Família a partir do CPF ou NIS informado.
+
+```typescript
+client.portalTransparencia
+  .bolsaFamilia({
+    cpf: '000.000.000-00',
+    data_inicio: '2021-01-01',
+    data_fim: '2021-12-31',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Benefício de Prestação Continuada (BPC)
+
+Consulta benefícios do tipo Benefício de Prestação Continuada (BPC), limitado a 50 parcelas.
+
+```typescript
+client.portalTransparencia
+  .bpc({
+    cpf: '000.000.000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Convênios e Acordos
+
+Consulta detalhes de Convênios e Acordos, retornando os dados dos primeiros 50 convênios do convenente informado.
+
+```typescript
+client.portalTransparencia
+  .convenios({
+    convenente: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Acordos de Leniência
+
+Consulta sanções do tipo Detalhamento da Penalidade - Acordos de Leniência, com a relação das empresas que possuem acordo de leniência.
+
+```typescript
+client.portalTransparencia
+  .leniencia({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Programa de Erradicação do Trabalho Infantil (PETI)
+
+Consulta benefícios do tipo PETI, limitado a 50 resultados.
+
+```typescript
+client.portalTransparencia
+  .peti({
+    cpf: '000.000.000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Repasse de Verba
+
+Obtém os repasses de verba feitos para o estado ou município informado.
+
+```typescript
+client.portalTransparencia
+  .repasse({
+    ano: '2021',
+    localidade: 'São Paulo',
+    tipo: 'municipio',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Garantia-Safra
+
+Consulta benefícios do tipo Garantia-Safra, limitado a 50 parcelas.
+
+```typescript
+client.portalTransparencia
+  .garantiaSafra({
+    cpf: '000.000.000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Seguro Defeso
+
+Consulta benefícios do tipo Seguro Defeso, limitado a 50 parcelas na tabela de recebidos.
+
+```typescript
+client.portalTransparencia
+  .seguroDefeso({
     cpf: '000.000.000-00',
   })
   .then(response => {
