@@ -13,6 +13,9 @@
   "repository": "git@github.com:bralandealmeida/infosimples-sdk.git",
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "packageManager": "pnpm@10.19.0",
   "files": [
     "dist"
