@@ -36,6 +36,7 @@
     - [Cadastro de Expulsões da Administração Federal (CEAF)](#cadastro-de-expulsões-da-administração-federal-ceaf)
   - [Secretaria de Inspeção do Trabalho](#secretaria-de-inspeção-do-trabalho)
     - [Trabalho Escravo](#trabalho-escravo)
+    - [CAEPI](#caepi)
   - [OFAC](#ofac)
     - [Sanções](#sanções)
 - [Licença](#licença)
@@ -321,6 +322,23 @@ Consulta se um CPF ou CNPJ está presente no cadastro de empregadores que tenham
 client.sit
   .trabalhoEscravo({
     cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### CAEPI
+
+Consulta de Certificado de Aprovação de Equipamento de Proteção Individual (CAEPI) da Secretaria de Inspeção do Trabalho (SIT). Pode ser usada para verificar a validade de certificados de equipamentos de proteção individual.
+
+```typescript
+client.sit
+  .caepi({
+    ca: '00000',
   })
   .then(response => {
     console.log(response);
