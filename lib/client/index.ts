@@ -16,7 +16,8 @@ const isFunction = (func: any) => {
   return typeof func === 'function';
 };
 
-const binder = (func: Function, args: any) => func.bind(this, args);
+const binder = (func: (...args: any[]) => any, args: any) =>
+  func.bind(this, args);
 
 const looper = (resource: any, auth: IConnectOpts) => {
   return Object.entries<any>(resource).reduce(
