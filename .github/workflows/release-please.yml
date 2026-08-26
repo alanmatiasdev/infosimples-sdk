@@ -1,0 +1,55 @@
+name: release-please
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+
+      - uses: pnpm/action-setup@v4
+        if: ${{ steps.release.outputs.release_created }}
+
+      # v6+ required: trusted publishing (OIDC) needs npm CLI >=11.5.1,
+      # which older setup-node majors don't guarantee.
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: pnpm install --frozen-lockfile
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: pnpm build
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: pnpm test
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: pnpm lint
+        if: ${{ steps.release.outputs.release_created }}
+
+      # Trusted publishing (OIDC, via the id-token: write permission above)
+      # — no NPM_TOKEN needed. Uses `npm publish`, not `pnpm publish`:
+      # pnpm's OIDC support is still unreliable (pnpm/pnpm#9812, #11513),
+      # while npm's is GA. Provenance is generated automatically under
+      # trusted publishing, so --provenance is redundant here.
+      - run: npm publish
+        if: ${{ steps.release.outputs.release_created }}
