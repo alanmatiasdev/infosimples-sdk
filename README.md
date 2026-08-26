@@ -20,7 +20,37 @@
 - [InfoSimples Exemplos](#infosimples-exemplos):
   - [Receita Federal](#receita-federal)
     - [Busca de empresas por CNPJ](#busca-de-empresas-por-cnpj)
+    - [Busca de pessoa física por CPF](#busca-de-pessoa-física-por-cpf)
+    - [Agenda Tributária](#agenda-tributária)
+    - [Cafir](#cafir)
+    - [Comprovante de Pagamento](#comprovante-de-pagamento)
+    - [CTe](#cte)
+    - [IRPF](#irpf)
+    - [Simples (Listagem de Períodos para Emissão de DAS)](#simples-listagem-de-períodos-para-emissão-de-das)
+    - [MEI](#mei)
+    - [NFE](#nfe)
+    - [NFS-e](#nfs-e)
+    - [NFS-e / Notas Emitidas (Detalhes)](#nfs-e--notas-emitidas-detalhes)
+    - [NFS-e / Notas Emitidas](#nfs-e--notas-emitidas)
+    - [NFS-e / Notas Recebidas (Detalhes)](#nfs-e--notas-recebidas-detalhes)
+    - [NFS-e / Notas Recebidas](#nfs-e--notas-recebidas)
+    - [NIRF](#nirf)
+    - [PER/DCOMP](#perdcomp)
     - [PGFN (CND Federal)](#pgfn-cnd-federal)
+    - [PGFN (CND Federal) - Segunda Via](#pgfn-cnd-federal---segunda-via)
+    - [PGFN (CND Federal) - Lista Segunda Via](#pgfn-cnd-federal---lista-segunda-via)
+    - [PGFN / Lista de Devedores](#pgfn--lista-de-devedores)
+    - [PGFN (CND Federal) - Nova](#pgfn-cnd-federal---nova)
+    - [Radar (Habilitação Comércio Exterior)](#radar-habilitação-comércio-exterior)
+    - [Sistema de Acréscimos Legais (SAL) / Dados Cadastrais](#sistema-de-acréscimos-legais-sal--dados-cadastrais)
+    - [SICALC / Gerar DARF](#sicalc--gerar-darf)
+    - [SIMEI (Declaração Anual)](#simei-declaração-anual)
+    - [Simei / MEI / Emissão de Guia de Parcelamento](#simei--mei--emissão-de-guia-de-parcelamento)
+    - [Simples Nacional](#simples-nacional)
+    - [Simples (Emissão de DAS de MEI)](#simples-emissão-de-das-de-mei)
+    - [Simples (DASN SIMEI)](#simples-dasn-simei)
+    - [Simples / MEI / Emissão de Guia de Parcelamento](#simples--mei--emissão-de-guia-de-parcelamento)
+    - [Situação Fiscal](#situação-fiscal)
   - [Busca em Tribunais](#busca-em-tribunais)
     - [Certidão negativa Cível e Criminal no TRF4](#certidão-negativa-cível-e-criminal-no-trf4)
     - [Certidão negativa Cível e Criminal no TRF1](#certidão-negativa-cível-e-criminal-no-trf1)
@@ -98,6 +128,289 @@ client.receitaFederal
 
 O campo origem é opcional.
 
+#### Busca de pessoa física por CPF
+
+```typescript
+client.receitaFederal
+  .cpf({
+    cpf: '000.000.000-00',
+    birthdate: '1985-04-22',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Agenda Tributária
+
+```typescript
+client.receitaFederal
+  .agendaTributaria({
+    mes: '4',
+    ano: '2024',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Cafir
+
+Consulta dados do comprovante de Cadastro de Imóveis Rurais (Cafir) através do Cadastro Imobiliário Brasileiro (CIB).
+
+```typescript
+client.receitaFederal
+  .cafir({
+    cib: '00000000000',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Comprovante de Pagamento
+
+Consulta comprovantes de pagamento à Receita Federal, como DARFs, no portal de Serviços da Receita Federal.
+
+```typescript
+client.receitaFederal
+  .comprovantePagamento({
+    data_inicio: '2024-01-01',
+    data_fim: '2024-12-31',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### CTe
+
+Retorna todos os dados e eventos do Conhecimento de Transporte Eletrônico a partir da chave de acesso informada.
+
+```typescript
+client.receitaFederal
+  .cte({
+    cte: '00000000000000000000000000000000000000000000',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### IRPF
+
+Consulta Restituições de Imposto de Renda na Receita Federal a partir do CPF, data de nascimento e ano informados.
+
+```typescript
+client.receitaFederal
+  .irpf({
+    cpf: '000.000.000-00',
+    birthdate: '1985-04-22',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Simples (Listagem de Períodos para Emissão de DAS)
+
+Lista os Documentos de Arrecadação do Simples Nacional (DAS) de um MEI optante pelo SIMEI, disponíveis para emissão no ano informado.
+
+```typescript
+client.receitaFederal
+  .listarDas({
+    cnpj: '00.000.000/0000-00',
+    ano: '2024',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### MEI
+
+Consulta e emite o Certificado da Condição do Microempreendedor Individual (CCMEI) no Portal do Empreendedor.
+
+```typescript
+client.receitaFederal
+  .mei({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+Alternativamente você pode usar o CPF do proprietário para a busca.
+
+#### NFE
+
+Retorna os dados e eventos da Nota Fiscal Eletrônica a partir da chave de acesso informada.
+
+```typescript
+client.receitaFederal
+  .nfe({
+    nfe: '00000000000000000000000000000000000000000000',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### NFS-e
+
+Consulta os dados de uma NFS-e por meio da chave de acesso informada.
+
+```typescript
+client.receitaFederal
+  .nfse({
+    chave: '00000000000000000000000000000000000000000000000',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### NFS-e / Notas Emitidas (Detalhes)
+
+Retorna os dados, DANFS-e e XML de uma NFS-e emitida no Portal de Gestão NFS-e, por meio da chave de acesso da nota.
+
+```typescript
+client.receitaFederal
+  .nfseNotaEmitidaDetalhes({
+    chave: '00000000000000000000000000000000000000000000000',
+    login_cnpj: '00.000.000/0000-00',
+    login_senha: 'senha',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### NFS-e / Notas Emitidas
+
+Consulta os dados de NFS-es emitidas no Portal de Gestão NFS-e, por meio do cadastro ou certificado digital.
+
+```typescript
+client.receitaFederal
+  .nfseNotasEmitidas({
+    login_cnpj: '00.000.000/0000-00',
+    login_senha: 'senha',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### NFS-e / Notas Recebidas (Detalhes)
+
+Retorna os dados, DANFS-e e XML de uma NFS-e recebida no Portal de Gestão NFS-e, por meio da chave de acesso da nota.
+
+```typescript
+client.receitaFederal
+  .nfseNotaRecebidaDetalhes({
+    chave: '00000000000000000000000000000000000000000000000',
+    login_cnpj: '00.000.000/0000-00',
+    login_senha: 'senha',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### NFS-e / Notas Recebidas
+
+Consulta os dados de NFS-es recebidas no Portal de Gestão NFS-e, por meio do cadastro ou certificado digital.
+
+```typescript
+client.receitaFederal
+  .nfseNotasRecebidas({
+    login_cnpj: '00.000.000/0000-00',
+    login_senha: 'senha',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### NIRF
+
+Emite a Certidão de Débitos Relativos a Tributos Federais e à Dívida Ativa da União de Imóvel Rural através do Número do Imóvel na Receita Federal (NIRF).
+
+```typescript
+client.receitaFederal
+  .nirf({
+    nirf: '00000000000',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+Alternativamente você pode usar o CIB para a busca.
+
+#### PER/DCOMP
+
+Consulta pedidos PER/DCOMP (Pedido Eletrônico de Restituição, Ressarcimento ou Reembolso e Declaração de Compensação).
+
+```typescript
+client.receitaFederal
+  .perdcomp({
+    cpf: '000.000.000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
 #### PGFN (CND Federal)
 
 Emite a Certidão de Débitos Relativos a Créditos Tributários Federais e à Dívida Ativa da União a partir do número de CNPJ ou CPF.
@@ -106,6 +419,7 @@ Emite a Certidão de Débitos Relativos a Créditos Tributários Federais e à D
 client.receitaFederal
   .pgfn({
     cpf: '000.000.000-00',
+    birthdate: '1985-04-22',
     preferencia_emissao: '2via',
   })
   .then(response => {
@@ -116,7 +430,262 @@ client.receitaFederal
   });
 ```
 
-Alternativamente você pode usar o CNPJ para a busca. O campo preferencia_emissao é opcional.
+Alternativamente você pode usar o CNPJ para a busca (sem birthdate). O campo preferencia_emissao é opcional.
+
+#### PGFN (CND Federal) - Segunda Via
+
+Emite a segunda via de uma Certidão de Débitos Relativos a Créditos Tributários Federais e à Dívida Ativa da União.
+
+```typescript
+client.receitaFederal
+  .pgfnSegundaVia({
+    cpf: '000.000.000-00',
+    birthdate: '1985-04-22',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### PGFN (CND Federal) - Lista Segunda Via
+
+Retorna uma lista com segunda via de certidões emitidas entre as datas de início e fim informadas.
+
+```typescript
+client.receitaFederal
+  .pgfnSegundaViaLista({
+    cpf: '000.000.000-00',
+    birthdate: '1985-04-22',
+    data_inicio: '2024-01-01',
+    data_fim: '2024-12-31',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### PGFN / Lista de Devedores
+
+Consulta os contribuintes inscritos em dívida ativa da União e do FGTS, na condição de devedor principal, corresponsável ou solidário.
+
+```typescript
+client.receitaFederal
+  .pgfnDevedores({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### PGFN (CND Federal) - Nova
+
+Emite uma nova Certidão de Débitos Relativos a Créditos Tributários Federais e à Dívida Ativa da União.
+
+```typescript
+client.receitaFederal
+  .pgfnNova({
+    cpf: '000.000.000-00',
+    birthdate: '1985-04-22',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Radar (Habilitação Comércio Exterior)
+
+Consulta a situação da habilitação para operar no Comércio Exterior.
+
+```typescript
+client.receitaFederal
+  .radar({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Sistema de Acréscimos Legais (SAL) / Dados Cadastrais
+
+Consulta se um número de PIS é válido através do Sistema de Acréscimos Legais (SAL).
+
+```typescript
+client.receitaFederal
+  .salCadastro({
+    pis: '00000000000',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### SICALC / Gerar DARF
+
+Gera DARFs no site do SICALC da Receita Federal.
+
+```typescript
+client.receitaFederal
+  .sicalcDarf({
+    cnpj: '00.000.000/0000-00',
+    valor_principal: '1234.56',
+    periodo_apuracao: '04/2024',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### SIMEI (Declaração Anual)
+
+Realiza a Declaração Anual do Simples Nacional (DASN) para Microempreendedor Individual (MEI).
+
+```typescript
+client.receitaFederal
+  .simeiDasn({
+    cnpj: '00.000.000/0000-00',
+    tipo_declaracao: 'original',
+    ano_calendario: '2024',
+    receita_bruta_comercio: '1230.53',
+    receita_bruta_servicos: '0.00',
+    possui_empregado: '0',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Simei / MEI / Emissão de Guia de Parcelamento
+
+Emite guias de Parcelamento Microempreendedor Individual na aba Simei no site da Receita Federal.
+
+```typescript
+client.receitaFederal
+  .simeiMeiEmissaoGuia({
+    cnpj: '00.000.000/0000-00',
+    cpf: '000.000.000-00',
+    codigo_acesso: 'codigo-de-acesso',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Simples Nacional
+
+Consulta a situação atual do contribuinte no Simples Nacional e no SIMEI, os períodos anteriores de opção e os agendamentos/eventos futuros.
+
+```typescript
+client.receitaFederal
+  .simplesNacional({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Simples (Emissão de DAS de MEI)
+
+Emite os Documentos de Arrecadação do Simples Nacional (DAS) de um MEI optante pelo SIMEI.
+
+```typescript
+client.receitaFederal
+  .simplesDas({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Simples (DASN SIMEI)
+
+Verifica a situação da Declaração Anual do Simples Nacional (DASN) para Microempreendedor Individual (MEI).
+
+```typescript
+client.receitaFederal
+  .simplesDasn({
+    cnpj: '00.000.000/0000-00',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Simples / MEI / Emissão de Guia de Parcelamento
+
+Emite guias de Parcelamento Microempreendedor Individual no site da Receita Federal.
+
+```typescript
+client.receitaFederal
+  .simplesMeiEmissaoGuia({
+    cnpj: '00.000.000/0000-00',
+    cpf: '000.000.000-00',
+    codigo_acesso: 'codigo-de-acesso',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+#### Situação Fiscal
+
+Consulta informações cadastrais e pendências de uma empresa ou pessoa física no portal de Serviços da Receita Federal.
+
+```typescript
+client.receitaFederal
+  .situacaoFiscal({
+    login_cpf: '000.000.000-00',
+    login_senha: 'senha',
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
 
 ## Busca em Tribunais
 
