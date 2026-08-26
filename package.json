@@ -10,7 +10,7 @@
     "infosimples-sdk"
   ],
   "main": "dist/index.js",
-  "repository": "git@github.com:bralandealmeida/infosimples-sdk.git",
+  "repository": "git@github.com:alanmatiasdev/infosimples-sdk.git",
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
   "engines": {
