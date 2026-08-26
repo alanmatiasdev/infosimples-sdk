@@ -11,7 +11,7 @@
 ### Todo
 
 - [ ] implementar demais métodos da API InfoSimples
-- [ ] implementar testes automatizados
+- [x] implementar testes automatizados
 
 **Sumário**
 

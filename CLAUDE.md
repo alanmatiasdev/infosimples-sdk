@@ -10,11 +10,15 @@ A TypeScript SDK that wraps the InfoSimples API v2 (`https://api.infosimples.com
 
 ```bash
 pnpm build         # tsc compile: lib/ + index.ts -> dist/
+pnpm test          # vitest (HTTP calls mocked with nock)
 pnpm lint          # eslint
 pnpm format:check  # check formatting (singleQuote, trailingComma: all, arrowParens: avoid)
 ```
 
-There is no `test` script — the project has no automated tests yet.
+Tests live under `test/`, mirroring `lib/`. `test/client/` covers `connect()`/`looper`/`binder`
+(the runtime bind-away-`opts` machinery) and the `api.ts` get/post wrappers; `test/resources/`
+has one representative method per resource file, asserting the endpoint path and that `opts` is
+merged into the POST payload — not full coverage of every exported method.
 
 Commit messages are enforced by commitlint (`@commitlint/config-conventional`) via a husky `commit-msg` hook, so commits must follow Conventional Commits (`type(scope): summary`).
 
