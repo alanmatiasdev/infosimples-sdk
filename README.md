@@ -43,10 +43,10 @@
 
 # Instalando
 
-Com Yarn:
+Com pnpm:
 
 ```bash
-yarn add install infosimples-sdk
+pnpm add infosimples-sdk
 ```
 
 # Iniciando

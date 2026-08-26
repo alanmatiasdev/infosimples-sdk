@@ -13,12 +13,13 @@
   "repository": "git@github.com:bralandealmeida/infosimples-sdk.git",
   "author": "Alan Matias <alandealmeida@insightlab.com.br>",
   "license": "MIT",
+  "packageManager": "pnpm@10.19.0",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc",
-    "prepublish": "yarn build"
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
