@@ -24,5 +24,6 @@ Every resource method is declared with the full `(opts: IConnectOpts, data)` sig
 ## Further documentation
 
 - [`docs/architecture.md`](docs/architecture.md) — entry point chain, client factory pattern, resources, API layer, `OmitFirstArg`, test layout
+- [`docs/testing.md`](docs/testing.md) — how to write tests in this repo's pattern (vitest + nock)
 - [`docs/releasing.md`](docs/releasing.md) — release-please / npm trusted-publishing flow
 - [`docs/adrs/`](docs/adrs/) — architecture decision records
