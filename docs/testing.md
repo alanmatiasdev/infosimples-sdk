@@ -77,7 +77,7 @@ Points that matter:
 ## `client/` tests
 
 `test/client/index.test.ts` and `test/client/api.test.ts` cover the machinery every resource method
-relies on, so they're a good reference when the *pattern itself* changes (e.g. auth stops being
+relies on, so they're a good reference when the _pattern itself_ changes (e.g. auth stops being
 body-based, or `connect()`'s binding logic changes) rather than when adding a new endpoint:
 
 - `connect()` throws without a token.

@@ -107,10 +107,8 @@ const pgfnSegundaViaLista = async (
   data: PGFNSegundaViaListaPayload,
 ) => await api.post('/receita-federal/pgfn/2via-list', { ...opts, ...data });
 
-const pgfnDevedores = async (
-  opts: IConnectOpts,
-  data: PGFNDevedoresPayload,
-) => await api.post('/receita-federal/pgfn/devedores', { ...opts, ...data });
+const pgfnDevedores = async (opts: IConnectOpts, data: PGFNDevedoresPayload) =>
+  await api.post('/receita-federal/pgfn/devedores', { ...opts, ...data });
 
 const pgfnNova = async (opts: IConnectOpts, data: PGFNNovaPayload) =>
   await api.post('/receita-federal/pgfn/nova', { ...opts, ...data });
@@ -179,10 +177,9 @@ export default {
   nfseNotasEmitidas: nfseNotasEmitidas as unknown as OmitFirstArg<
     typeof nfseNotasEmitidas
   >,
-  nfseNotaRecebidaDetalhes:
-    nfseNotaRecebidaDetalhes as unknown as OmitFirstArg<
-      typeof nfseNotaRecebidaDetalhes
-    >,
+  nfseNotaRecebidaDetalhes: nfseNotaRecebidaDetalhes as unknown as OmitFirstArg<
+    typeof nfseNotaRecebidaDetalhes
+  >,
   nfseNotasRecebidas: nfseNotasRecebidas as unknown as OmitFirstArg<
     typeof nfseNotasRecebidas
   >,
@@ -195,9 +192,7 @@ export default {
   pgfnSegundaViaLista: pgfnSegundaViaLista as unknown as OmitFirstArg<
     typeof pgfnSegundaViaLista
   >,
-  pgfnDevedores: pgfnDevedores as unknown as OmitFirstArg<
-    typeof pgfnDevedores
-  >,
+  pgfnDevedores: pgfnDevedores as unknown as OmitFirstArg<typeof pgfnDevedores>,
   pgfnNova: pgfnNova as unknown as OmitFirstArg<typeof pgfnNova>,
   radar: radar as unknown as OmitFirstArg<typeof radar>,
   salCadastro: salCadastro as unknown as OmitFirstArg<typeof salCadastro>,
