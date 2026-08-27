@@ -16,6 +16,7 @@ import cnj from './cnj';
 import mpf from './mpf';
 import tcu from './tcu';
 import cgu from './cgu';
+import correios from './correios';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -30,6 +31,7 @@ export * from './cnjTypes';
 export * from './mpfTypes';
 export * from './tcuTypes';
 export * from './cguTypes';
+export * from './correiosTypes';
 
 export default {
   tribunais,
@@ -50,4 +52,5 @@ export default {
   mpf,
   tcu,
   cgu,
+  correios,
 };
