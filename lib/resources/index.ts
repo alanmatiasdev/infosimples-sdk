@@ -9,6 +9,7 @@ import cvm from './cvm';
 import anvisa from './anvisa';
 import anatel from './anatel';
 import cadastur from './cadastur';
+import anp from './anp';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -16,6 +17,7 @@ export * from './portalTransparenciaTypes';
 export * from './bcbTypes';
 export * from './cvmTypes';
 export * from './anvisaTypes';
+export * from './anpTypes';
 
 export default {
   tribunais,
@@ -29,4 +31,5 @@ export default {
   anvisa,
   anatel,
   cadastur,
+  anp,
 };
