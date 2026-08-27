@@ -10,7 +10,7 @@
 
 ### Todo
 
-- [ ] implementar demais métodos da API InfoSimples (~84 categorias/695 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
+- [ ] implementar demais métodos da API InfoSimples (~83 categorias/691 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
 - [x] implementar testes automatizados
 
 **Sumário**
@@ -45,7 +45,7 @@ const client: InfoSimplesClient = InfoSimples.connect({
 
 # Documentação por Endpoint
 
-Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, BCB, CVM, ANVISA e Cadastur) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
+Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, BCB, CVM, ANVISA e Cadastur) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
 
 - [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal)
 - [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais)
@@ -55,6 +55,7 @@ Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal d
 - [OFAC](https://github.com/alanmatiasdev/infosimples-sdk/wiki/OFAC)
 - [Anatel](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anatel)
 - [ANP](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anp)
+- [Antecedentes Criminais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antecedentes-Criminais)
 - [BCB](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Bcb)
 - [CVM](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cvm)
 - [ANVISA](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anvisa)
