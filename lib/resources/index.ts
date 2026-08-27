@@ -4,6 +4,7 @@ import caixa from './caixa';
 import portalTransparencia from './portalTransparencia';
 import sit from './sit';
 import ofac from './ofac';
+import cadastur from './cadastur';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -16,4 +17,5 @@ export default {
   portalTransparencia,
   sit,
   ofac,
+  cadastur,
 };
