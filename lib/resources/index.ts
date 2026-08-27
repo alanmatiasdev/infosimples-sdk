@@ -12,6 +12,7 @@ import cadastur from './cadastur';
 import anp from './anp';
 import antecedentesCriminais from './antecedentesCriminais';
 import antt from './antt';
+import cnj from './cnj';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -22,6 +23,7 @@ export * from './anvisaTypes';
 export * from './anpTypes';
 export * from './antecedentesCriminaisTypes';
 export * from './anttTypes';
+export * from './cnjTypes';
 
 export default {
   tribunais,
@@ -38,4 +40,5 @@ export default {
   anp,
   antecedentesCriminais,
   antt,
+  cnj,
 };
