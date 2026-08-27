@@ -14,6 +14,7 @@ import antecedentesCriminais from './antecedentesCriminais';
 import antt from './antt';
 import cnj from './cnj';
 import mpf from './mpf';
+import tcu from './tcu';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -26,6 +27,7 @@ export * from './antecedentesCriminaisTypes';
 export * from './anttTypes';
 export * from './cnjTypes';
 export * from './mpfTypes';
+export * from './tcuTypes';
 
 export default {
   tribunais,
@@ -44,4 +46,5 @@ export default {
   antt,
   cnj,
   mpf,
+  tcu,
 };
