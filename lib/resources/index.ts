@@ -17,6 +17,7 @@ import mpf from './mpf';
 import tcu from './tcu';
 import cgu from './cgu';
 import correios from './correios';
+import inpi from './inpi';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -32,6 +33,7 @@ export * from './mpfTypes';
 export * from './tcuTypes';
 export * from './cguTypes';
 export * from './correiosTypes';
+export * from './inpiTypes';
 
 export default {
   tribunais,
@@ -53,4 +55,5 @@ export default {
   tcu,
   cgu,
   correios,
+  inpi,
 };

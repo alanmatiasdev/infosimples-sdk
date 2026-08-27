@@ -10,7 +10,7 @@
 
 ### Todo
 
-- [ ] implementar demais métodos da API InfoSimples (~77 categorias/663 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
+- [ ] implementar demais métodos da API InfoSimples (~76 categorias/658 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
 - [x] implementar testes automatizados
 
 **Sumário**
@@ -45,7 +45,7 @@ const client: InfoSimplesClient = InfoSimples.connect({
 
 # Documentação por Endpoint
 
-Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, ANTT, BCB, CNJ, CVM, ANVISA, Cadastur, MPF, TCU, CGU e Correios) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
+Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, ANTT, BCB, CNJ, CVM, ANVISA, Cadastur, MPF, TCU, CGU, Correios e INPI) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
 
 - [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal)
 - [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais)
@@ -66,6 +66,7 @@ Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal d
 - [TCU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tcu)
 - [CGU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cgu)
 - [Correios](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Correios)
+- [INPI](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Inpi)
 
 # Licença
 
