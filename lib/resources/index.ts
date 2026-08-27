@@ -18,6 +18,8 @@ import tcu from './tcu';
 import cgu from './cgu';
 import correios from './correios';
 import inpi from './inpi';
+import onu from './onu';
+import icij from './icij';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -34,6 +36,8 @@ export * from './tcuTypes';
 export * from './cguTypes';
 export * from './correiosTypes';
 export * from './inpiTypes';
+export * from './onuTypes';
+export * from './icijTypes';
 
 export default {
   tribunais,
@@ -56,4 +60,6 @@ export default {
   cgu,
   correios,
   inpi,
+  onu,
+  icij,
 };
