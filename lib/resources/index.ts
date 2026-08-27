@@ -15,6 +15,7 @@ import antt from './antt';
 import cnj from './cnj';
 import mpf from './mpf';
 import tcu from './tcu';
+import cgu from './cgu';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -28,6 +29,7 @@ export * from './anttTypes';
 export * from './cnjTypes';
 export * from './mpfTypes';
 export * from './tcuTypes';
+export * from './cguTypes';
 
 export default {
   tribunais,
@@ -47,4 +49,5 @@ export default {
   cnj,
   mpf,
   tcu,
+  cgu,
 };
