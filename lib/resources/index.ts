@@ -5,6 +5,7 @@ import portalTransparencia from './portalTransparencia';
 import sit from './sit';
 import ofac from './ofac';
 import anatel from './anatel';
+import cadastur from './cadastur';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -18,4 +19,5 @@ export default {
   sit,
   ofac,
   anatel,
+  cadastur,
 };
