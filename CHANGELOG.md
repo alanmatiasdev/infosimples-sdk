@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.6.0](https://github.com/alanmatiasdev/infosimples-sdk/compare/v0.5.0...v0.6.0) (2026-08-27)
+
+
+### Features
+
+* **anp:** add baseDistribuicao, instalacoesSimp, postos and revendas endpoints ([#19](https://github.com/alanmatiasdev/infosimples-sdk/issues/19)) ([6aa9632](https://github.com/alanmatiasdev/infosimples-sdk/commit/6aa9632fc84b0bc06a11d0484677343a9b15ea3e))
+* **antecedentes-criminais:** add pfEmit, pfVal, mg and sp endpoints ([#21](https://github.com/alanmatiasdev/infosimples-sdk/issues/21)) ([d248edf](https://github.com/alanmatiasdev/infosimples-sdk/commit/d248edfb6440f867c8b57882148b73b359df370d))
+* **antt:** add ANTT endpoints (piso de frete, produtos perigosos, SIFAMA, RNTRC) ([#22](https://github.com/alanmatiasdev/infosimples-sdk/issues/22)) ([435d1ae](https://github.com/alanmatiasdev/infosimples-sdk/commit/435d1ae930fd8894a381c48bbd748c3a491c20a3))
+* **cgu:** add cncTipo1 and cncTipo2 endpoints ([#26](https://github.com/alanmatiasdev/infosimples-sdk/issues/26)) ([b2cdc38](https://github.com/alanmatiasdev/infosimples-sdk/commit/b2cdc389e88813f651371efd0a03b729954e449f))
+* **cnj:** add improbidade, mandadosPrisao, serventias and seeuProcessos endpoints ([#23](https://github.com/alanmatiasdev/infosimples-sdk/issues/23)) ([6585b70](https://github.com/alanmatiasdev/infosimples-sdk/commit/6585b70e82acf42cb93adbd4a554cf03dadbeb00))
+* **correios:** add cep, completaCep, rastreamento and restricoesEntrega endpoints ([#27](https://github.com/alanmatiasdev/infosimples-sdk/issues/27)) ([8136573](https://github.com/alanmatiasdev/infosimples-sdk/commit/8136573b10f71981601d4a3f8bc805729e9fd984))
+* **inpi:** add marcas, patentes and processo de registro de marca endpoints ([#28](https://github.com/alanmatiasdev/infosimples-sdk/issues/28)) ([6b956c0](https://github.com/alanmatiasdev/infosimples-sdk/commit/6b956c073030a628afb7cc61845f3ebf908efc95))
+* **mpf:** add amazoniaProtege, certidaoNegativa and processos endpoints ([#24](https://github.com/alanmatiasdev/infosimples-sdk/issues/24)) ([9819183](https://github.com/alanmatiasdev/infosimples-sdk/commit/98191835b68e15f6ae153ee958f4f972dd5de1f4))
+* **onu,icij:** add sancoes and offshoreLeaks endpoints ([#29](https://github.com/alanmatiasdev/infosimples-sdk/issues/29)) ([1fd2845](https://github.com/alanmatiasdev/infosimples-sdk/commit/1fd28458a5f663405961da395de7e222964c6654))
+* **tcu:** add cni, cnp, consolidadaPj, inabilitados and inidoneos endpoints ([#25](https://github.com/alanmatiasdev/infosimples-sdk/issues/25)) ([2801fe5](https://github.com/alanmatiasdev/infosimples-sdk/commit/2801fe59eb8051ceda85b144d5e5c9c718dd1141))
+
 ## [0.5.0](https://github.com/alanmatiasdev/infosimples-sdk/compare/v0.4.0...v0.5.0) (2026-08-27)
 
 
