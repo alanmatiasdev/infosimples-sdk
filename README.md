@@ -10,7 +10,7 @@
 
 ### Todo
 
-- [ ] implementar demais métodos da API InfoSimples (~82 categorias/682 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
+- [ ] implementar demais métodos da API InfoSimples (~80 categorias/680 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
 - [x] implementar testes automatizados
 
 **Sumário**
@@ -45,7 +45,7 @@ const client: InfoSimplesClient = InfoSimples.connect({
 
 # Documentação por Endpoint
 
-Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, ANTT, BCB, CVM, ANVISA e Cadastur) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
+Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, ANTT, BCB, CVM, ANVISA, Cadastur, ONU e ICIJ) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
 
 - [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal)
 - [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais)
@@ -61,6 +61,8 @@ Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal d
 - [CVM](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cvm)
 - [ANVISA](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anvisa)
 - [Cadastur](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cadastur)
+- [ONU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Onu)
+- [ICIJ](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Icij)
 
 # Licença
 
