@@ -12,6 +12,10 @@ import cadastur from './cadastur';
 import anp from './anp';
 import antecedentesCriminais from './antecedentesCriminais';
 import antt from './antt';
+import cnj from './cnj';
+import mpf from './mpf';
+import tcu from './tcu';
+import cgu from './cgu';
 import correios from './correios';
 
 export * from './receitaFederalTypes';
@@ -23,6 +27,10 @@ export * from './anvisaTypes';
 export * from './anpTypes';
 export * from './antecedentesCriminaisTypes';
 export * from './anttTypes';
+export * from './cnjTypes';
+export * from './mpfTypes';
+export * from './tcuTypes';
+export * from './cguTypes';
 export * from './correiosTypes';
 
 export default {
@@ -40,5 +48,9 @@ export default {
   anp,
   antecedentesCriminais,
   antt,
+  cnj,
+  mpf,
+  tcu,
+  cgu,
   correios,
 };
