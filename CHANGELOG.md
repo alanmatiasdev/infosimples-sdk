@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.5.0](https://github.com/alanmatiasdev/infosimples-sdk/compare/v0.4.0...v0.5.0) (2026-08-27)
+
+
+### Features
+
+* **anatel:** add celularLegal endpoint ([#13](https://github.com/alanmatiasdev/infosimples-sdk/issues/13)) ([b1eba27](https://github.com/alanmatiasdev/infosimples-sdk/commit/b1eba2700668a8881ffc593677347537e249c487))
+* **anvisa:** add bularioEletronico, empresas and processo endpoints ([#16](https://github.com/alanmatiasdev/infosimples-sdk/issues/16)) ([3780219](https://github.com/alanmatiasdev/infosimples-sdk/commit/378021943997e2e5e494e50c330e003661cbbfea))
+* **bcb:** add cotacoes and valoresReceber endpoints ([#14](https://github.com/alanmatiasdev/infosimples-sdk/issues/14)) ([d90e560](https://github.com/alanmatiasdev/infosimples-sdk/commit/d90e56068bd46b1ec9cdfbe258f05710d7b6a770))
+* **cadastur:** add prestadores endpoint ([#17](https://github.com/alanmatiasdev/infosimples-sdk/issues/17)) ([194a24d](https://github.com/alanmatiasdev/infosimples-sdk/commit/194a24d2cee1e5fffa5341510534a00510296c2c))
+* **cvm:** add participante, processoAdministrativo and sancionadores endpoints ([#15](https://github.com/alanmatiasdev/infosimples-sdk/issues/15)) ([4d4124c](https://github.com/alanmatiasdev/infosimples-sdk/commit/4d4124c30db30b3b9d76230a1e939989f4f2b123))
+
+
+### Bug Fixes
+
+* exclude CHANGELOG.md from prettier format:check [skip ci] ([506c711](https://github.com/alanmatiasdev/infosimples-sdk/commit/506c7118c1775a6f40d700d94533e92a9203fa0a))
+
 ## [0.4.0](https://github.com/alanmatiasdev/infosimples-sdk/compare/v0.3.3...v0.4.0) (2026-08-27)
 
 
