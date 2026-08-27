@@ -10,6 +10,7 @@ import anvisa from './anvisa';
 import anatel from './anatel';
 import cadastur from './cadastur';
 import anp from './anp';
+import antecedentesCriminais from './antecedentesCriminais';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
@@ -18,6 +19,7 @@ export * from './bcbTypes';
 export * from './cvmTypes';
 export * from './anvisaTypes';
 export * from './anpTypes';
+export * from './antecedentesCriminaisTypes';
 
 export default {
   tribunais,
@@ -32,4 +34,5 @@ export default {
   anatel,
   cadastur,
   anp,
+  antecedentesCriminais,
 };
