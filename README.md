@@ -10,7 +10,7 @@
 
 ### Todo
 
-- [ ] implementar demais métodos da API InfoSimples
+- [ ] implementar demais métodos da API InfoSimples (~85 categorias/700 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
 - [x] implementar testes automatizados
 
 **Sumário**
@@ -45,7 +45,7 @@ const client: InfoSimplesClient = InfoSimples.connect({
 
 # Documentação por Endpoint
 
-Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho e OFAC) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
+Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, BCB, CVM, ANVISA e Cadastur) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
 
 - [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal)
 - [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais)
@@ -53,6 +53,11 @@ Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal d
 - [Portal da Transparência](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Portal-da-Transparencia)
 - [Secretaria de Inspeção do Trabalho](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Secretaria-de-Inspecao-do-Trabalho)
 - [OFAC](https://github.com/alanmatiasdev/infosimples-sdk/wiki/OFAC)
+- [Anatel](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anatel)
+- [BCB](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Bcb)
+- [CVM](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cvm)
+- [ANVISA](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anvisa)
+- [Cadastur](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cadastur)
 
 # Licença
 
