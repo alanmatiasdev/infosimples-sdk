@@ -84,18 +84,30 @@ Os parâmetros de cada endpoint são tipados. O tipo `InfoSimplesClient` descrev
 
 ## Documentação dos endpoints
 
-Os exemplos de uso de cada endpoint vivem na **[wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki)**, organizados por órgão:
+Os exemplos de uso de cada endpoint vivem na **[wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki)**, uma página por órgão:
 
-| Órgão | | |
-| --- | --- | --- |
-| [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal) | [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais) | [Portal da Transparência](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Portal-da-Transparencia) |
-| [Caixa](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Caixa) | [Secretaria de Inspeção do Trabalho](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Secretaria-de-Inspecao-do-Trabalho) | [OFAC](https://github.com/alanmatiasdev/infosimples-sdk/wiki/OFAC) |
-| [Anatel](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anatel) | [ANP](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anp) | [ANTT](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antt) |
-| [Antecedentes Criminais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antecedentes-Criminais) | [ANVISA](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anvisa) | [BCB](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Bcb) |
-| [Cadastur](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cadastur) | [CNJ](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cnj) | [CVM](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cvm) |
-| [MPF](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Mpf) | [TCU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tcu) | [CGU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cgu) |
-| [Correios](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Correios) | [INPI](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Inpi) | [ONU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Onu) |
-| [ICIJ](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Icij) | | |
+- [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal)
+- [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais)
+- [Portal da Transparência](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Portal-da-Transparencia)
+- [Caixa](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Caixa)
+- [Secretaria de Inspeção do Trabalho](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Secretaria-de-Inspecao-do-Trabalho)
+- [OFAC](https://github.com/alanmatiasdev/infosimples-sdk/wiki/OFAC)
+- [Anatel](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anatel)
+- [ANP](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anp)
+- [ANTT](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antt)
+- [Antecedentes Criminais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antecedentes-Criminais)
+- [ANVISA](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anvisa)
+- [BCB](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Bcb)
+- [Cadastur](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cadastur)
+- [CNJ](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cnj)
+- [CVM](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cvm)
+- [MPF](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Mpf)
+- [TCU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tcu)
+- [CGU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cgu)
+- [Correios](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Correios)
+- [INPI](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Inpi)
+- [ONU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Onu)
+- [ICIJ](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Icij)
 
 Para a referência completa de parâmetros e formato de resposta de cada consulta, consulte a
 [documentação oficial da InfoSimples](https://api.infosimples.com/consultas/docs).
