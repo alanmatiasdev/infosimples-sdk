@@ -10,7 +10,7 @@
 
 ### Todo
 
-- [ ] implementar demais métodos da API InfoSimples (~81 categorias/677 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
+- [ ] implementar demais métodos da API InfoSimples (~79 categorias/669 endpoints restantes de ~90 no total, segundo a spec OpenAPI da InfoSimples)
 - [x] implementar testes automatizados
 
 **Sumário**
@@ -45,7 +45,7 @@ const client: InfoSimplesClient = InfoSimples.connect({
 
 # Documentação por Endpoint
 
-Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, ANTT, BCB, CVM, ANVISA, Cadastur e TCU) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
+Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal da Transparência, Secretaria de Inspeção do Trabalho, OFAC, Anatel, ANP, Antecedentes Criminais, ANTT, BCB, CNJ, CVM, ANVISA, Cadastur, MPF e TCU) foram movidos para a [wiki do projeto](https://github.com/alanmatiasdev/infosimples-sdk/wiki), organizados por categoria:
 
 - [Receita Federal](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Receita-Federal)
 - [Tribunais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tribunais)
@@ -58,9 +58,11 @@ Os exemplos de uso de cada endpoint (Receita Federal, Tribunais, Caixa, Portal d
 - [Antecedentes Criminais](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antecedentes-Criminais)
 - [ANTT](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Antt)
 - [BCB](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Bcb)
+- [CNJ](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cnj)
 - [CVM](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cvm)
 - [ANVISA](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Anvisa)
 - [Cadastur](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Cadastur)
+- [MPF](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Mpf)
 - [TCU](https://github.com/alanmatiasdev/infosimples-sdk/wiki/Tcu)
 
 # Licença
