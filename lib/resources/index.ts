@@ -4,10 +4,12 @@ import caixa from './caixa';
 import portalTransparencia from './portalTransparencia';
 import sit from './sit';
 import ofac from './ofac';
+import anvisa from './anvisa';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
 export * from './portalTransparenciaTypes';
+export * from './anvisaTypes';
 
 export default {
   tribunais,
@@ -16,4 +18,5 @@ export default {
   portalTransparencia,
   sit,
   ofac,
+  anvisa,
 };
