@@ -5,11 +5,15 @@ import portalTransparencia from './portalTransparencia';
 import sit from './sit';
 import ofac from './ofac';
 import cvm from './cvm';
+import anvisa from './anvisa';
+import anatel from './anatel';
+import cadastur from './cadastur';
 
 export * from './receitaFederalTypes';
 export * from './tribunaisTypes';
 export * from './portalTransparenciaTypes';
 export * from './cvmTypes';
+export * from './anvisaTypes';
 
 export default {
   tribunais,
@@ -19,4 +23,7 @@ export default {
   sit,
   ofac,
   cvm,
+  anvisa,
+  anatel,
+  cadastur,
 };
